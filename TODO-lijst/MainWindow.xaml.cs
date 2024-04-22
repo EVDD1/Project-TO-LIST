@@ -1,4 +1,5 @@
-﻿using System.IO.Ports;
+﻿using System.Collections.ObjectModel;
+using System.IO.Ports;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,12 +18,15 @@ namespace TODO_lijst
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> items;
 
         SerialPort serialPort  = new SerialPort();
         Opdrachten Opdrachten = new Opdrachten();
         public MainWindow()
         {
             InitializeComponent();
+            items = new List<string>();
+
         }
 
         private void listBox_MouseUp(object sender, MouseButtonEventArgs e)
@@ -32,27 +36,40 @@ namespace TODO_lijst
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            if(listBox.SelectedIndex != -1)
+            {
+                items.RemoveAt(listBox.SelectedIndex);
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
+            if(listBox.SelectedIndex != -1)
+            {
+                items[listBox.SelectedIndex] = txtbxVervangen.Text;
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            List<string> opdrachtenLijst = new List<string>();
 
-            Opdrachten.Lijst = txtbxtoevoegen.Text;
-
-            
-            opdrachtenLijst.Add(Opdrachten.Toevoegen());
-
-            listBox.ItemsSource = opdrachtenLijst;
+            listBox.ItemsSource = items;
 
             //tekstvak leeg maken
             txtbxtoevoegen.Clear();
+
+        
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+          
+            Opdrachten.Lijst = txtbxtoevoegen.Text;
+
+            items.Add(Opdrachten.Toevoegen());
+
+          
         }
     }
 }
