@@ -35,10 +35,23 @@ namespace TODO_lijst
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if(listBox.SelectedIndex != -1)
+        { 
+            try
             {
-                items.RemoveAt(listBox.SelectedIndex);
+                if (listBox.SelectedIndex != -1)
+                {
+                    listBox.Items.Remove(listBox.SelectedItem);
+                    
+                }
+
+                else
+                {
+                    MessageBox.Show("Eerst een opdracht aanklikken!","Fout",MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -54,22 +67,30 @@ namespace TODO_lijst
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
-            listBox.ItemsSource = items;
+            try
+            {
+                if (txtbxtoevoegen.Text != "")
+                {
+                    Opdrachten.Lijst = txtbxtoevoegen.Text;
 
-            //tekstvak leeg maken
-            txtbxtoevoegen.Clear();
+                    string nieuweTaak = Opdrachten.Toevoegen();
 
-        
+                    items.Add(nieuweTaak);
+
+                    listBox.Items.Add(nieuweTaak);
+
+                    //tekstvak leeg maken
+                    txtbxtoevoegen.Clear();
+                }
+                else
+                    MessageBox.Show("Je moet eerst iets intypen!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-          
-            Opdrachten.Lijst = txtbxtoevoegen.Text;
 
-            items.Add(Opdrachten.Toevoegen());
-
-          
-        }
     }
 }
