@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TODO_lijst"
         mc:Ignorable="d"
-        Title="TODO-lijst" SizeToContent="Height" Width="600" FontSize="20" Background="LightGray">
+        Title="TODO-lijst" SizeToContent="Height" Width="600" FontSize="20" Background="LightGray" Loaded="Window_Loaded">
     <StackPanel Margin="10">
         <GroupBox Header="Taak toevoegen">
             <StackPanel>
                 
                 <TextBox Name="txtbxtoevoegen" Margin="10" ToolTip="Typ hier je opdracht in." ></TextBox>
-                    
+                <TextBox Name="txtbxDatum" Margin="10" ToolTip="Vul hier datum in ../../" ></TextBox>
                 <Button Click="Button_Click_2" Margin="10" ToolTip="Je opdracht toevoegen." Background="LightSkyBlue" FontWeight="Bold" >Toevoegen</Button>
             </StackPanel>
         </GroupBox>

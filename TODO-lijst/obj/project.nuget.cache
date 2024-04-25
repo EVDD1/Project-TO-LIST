@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gzN0/zoAPUC2ezVYUuwiW8bnKH/Xw/8UJiXKTcz097ZZ075KcBiM788tfNiKvwRCxk4JLm3SyOv7Ux3/e9XrZg==",
+  "dgSpecHash": "TzKiUcoGaYgeKIif2aHR8YrkaB6Ct3/V6QQj6ETRRwalK000TJVDaOeY9JRQRFqWzWs8ggwWuZ1r1KcKsOwBqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\TODO-lijst.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\emiel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\emiel\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\emiel\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
     "C:\\Users\\emiel\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\8.0.0\\runtime.linux-x64.runtime.native.system.io.ports.8.0.0.nupkg.sha512",
