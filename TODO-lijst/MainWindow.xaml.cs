@@ -34,7 +34,7 @@ namespace TODO_lijst
             InitializeComponent();
             items = new List<string>();
 
-
+            
 
 
         }

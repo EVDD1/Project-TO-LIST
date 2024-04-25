@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="Bestandnaam" SizeToContent="Height" Width="300" Background="Gray" FontSize="20">
     <StackPanel Margin="10">
-        <GroupBox Header="BestandNaam">
+        <GroupBox Header="Bestand kiezen">
+            <StackPanel>
+                <ComboBox Name="comboboxbestanden" Margin="10" SelectionChanged="cmbxbestanden_SelectionChanged"></ComboBox>
+                <Button Click="Button_Click_1" Margin="10" Content="Bewerken" Background="Green" FontWeight="Bold"></Button>
+                <TextBox x:Name="txtboxb"></TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Nieuwe bestandnaam">
             <StackPanel>
                 <TextBox Name="txtbestandNaam" Margin="10" ToolTip="Vul hier je bestandnaam in."></TextBox>
                 <Button Click="Button_Click" Margin="10" Content="Toevoegen" Background="CadetBlue" FontWeight="Bold" ></Button>
