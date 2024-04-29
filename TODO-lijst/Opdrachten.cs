@@ -9,6 +9,14 @@ namespace TODO_lijst
 {
     internal class Opdrachten
     {
+		private DateTime datum;
+
+		public DateTime Datum
+		{
+			get { return datum; }
+			set { datum = value; }
+		}
+
 		private string lijst;
 
 		public string Lijst
@@ -19,7 +27,7 @@ namespace TODO_lijst
 
 		public string Toevoegen()
 		{
-			return $"-{lijst}";
+			return $"-{lijst} : {datum}";
 		}
 	}
 }

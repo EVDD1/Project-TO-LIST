@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TODO_lijst"
         mc:Ignorable="d"
-        Title="Bestandnaam" SizeToContent="Height" Width="300" Background="Gray" FontSize="20">
+        Title="Bestandnaam" SizeToContent="Height" Width="300" Background="LightGray" FontSize="20">
     <StackPanel Margin="10">
         <GroupBox Header="Bestand kiezen">
             <StackPanel>
                 <ComboBox Name="comboboxbestanden" Margin="10" SelectionChanged="cmbxbestanden_SelectionChanged"></ComboBox>
                 <Button Click="Button_Click_1" Margin="10" Content="Bewerken" Background="Green" FontWeight="Bold"></Button>
-                <TextBox x:Name="txtboxb"></TextBox>
+                <ListBox x:Name="listboxbestand"></ListBox>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Nieuwe bestandnaam">

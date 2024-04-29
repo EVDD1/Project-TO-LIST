@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.IO.Ports;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Windows;
@@ -29,14 +30,12 @@ namespace TODO_lijst
         Opdrachten Opdrachten = new Opdrachten();
         Bestandnaam bestandNaam;
         string BestandNaam1;
+
+        string nieuweTaak;
         public MainWindow()
         {
             InitializeComponent();
             items = new List<string>();
-
-            
-
-
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -45,9 +44,10 @@ namespace TODO_lijst
             bestandNaam.Show();
         }
 
-        public void BestandToegvoegen(string bestandNaam)
+        public void BestandToegvoegen(string Naam)
         {
-            BestandNaam1 = bestandNaam;
+            bestandNaam.Close();
+            BestandNaam1 = Naam;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         { 
@@ -56,7 +56,7 @@ namespace TODO_lijst
                 if (listBox.SelectedIndex != -1)
                 {
                     listBox.Items.Remove(listBox.SelectedItem);
-                    
+
                 }
 
                 else
@@ -81,33 +81,33 @@ namespace TODO_lijst
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            string datum = txtbxDatum.Text;
+            int controle = 0;
+         
+            try
+            {
+               if(DateTime.TryParse(datum, out DateTime result))
+                {
+                    Opdrachten.Datum = result;
+                    controle++;
+                  
+                }
+               else
+                  MessageBox.Show("Geen geldige invoer voor datum!","Fout",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
 
             try
             {
-                if (txtbxtoevoegen.Text != "")
+                if (txtbxtoevoegen.Text != "" )
                 {
                     Opdrachten.Lijst = txtbxtoevoegen.Text;
 
-                    string nieuweTaak = Opdrachten.Toevoegen();
-
-                    items.Add(nieuweTaak);
-
-                    listBox.Items.Add(nieuweTaak);
-
-                    string json = JsonConvert.SerializeObject(items);
-
-                    try
-                    {
-                        string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string filePath = Path.Combine(desktopPath, $"{BestandNaam1}");
-                        File.WriteAllText(filePath, json);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    //tekstvak leeg maken
-                    txtbxtoevoegen.Clear();
+                    controle++;
                 }
                 else
                     MessageBox.Show("Je moet eerst iets intypen!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -116,7 +116,62 @@ namespace TODO_lijst
             {
                 MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            //toevoegen als allebij de voorwaarden juist zijn
+            if (controle == 2)
+            {
+                nieuweTaak = Opdrachten.Toevoegen();
+
+                listBox.Items.Add(nieuweTaak);
+                //items toevoegen aan list
+                items.Add(Opdrachten.Toevoegen());
+
+                txtbxDatum.Clear();
+                //tekstvak leeg maken
+                txtbxtoevoegen.Clear();
+
+                controle = 0;
+            }
+
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+            string json = JsonConvert.SerializeObject(items);
+
+            try
+            {
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string filePath = Path.Combine(desktopPath, $"{BestandNaam1}");
+                File.WriteAllText(filePath, json);
+
+                MessageBox.Show("Items zijn opgeslagen!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            //als je op terug klikt dan moet alles gecleard worden
+            items.Clear();
+            listBox.Items.Clear();
+
+            //het eerste venster weer openen
+            bestandNaam = new Bestandnaam(this);
+            bestandNaam.Owner = this;
+            bestandNaam.Show();
+
+          
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            //venster sluiten
+            this.Close();
+        }
     }
 }

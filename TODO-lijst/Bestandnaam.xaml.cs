@@ -23,6 +23,8 @@ namespace TODO_lijst
     public partial class Bestandnaam : Window
     {
          MainWindow _mainWindow;
+
+        string fileName;
         public Bestandnaam(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace TODO_lijst
             comboboxbestanden.Items.Add("None");
             foreach (string file in files)
             {
-                string fileName = Path.GetFileName(file);
+                 fileName = Path.GetFileName(file);
                 comboboxbestanden.Items.Add(fileName);
             }
         }
@@ -49,6 +51,8 @@ namespace TODO_lijst
                 _mainWindow.BestandToegvoegen(BestandNaam);
 
                 MessageBox.Show("Bestand toegevoegd!");
+
+            
             }
             else
                 MessageBox.Show("Je moet .txt achter bestandnaam zetten","Fout",MessageBoxButton.OK, MessageBoxImage.Error);
@@ -56,14 +60,15 @@ namespace TODO_lijst
 
         private void cmbxbestanden_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(comboboxbestanden.SelectedItem != null)
+            if (comboboxbestanden.SelectedItem.ToString() != "None")
             {
                 string selectedFileName = comboboxbestanden.SelectedItem.ToString();
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(desktopPath, selectedFileName);
                 string fileContent = File.ReadAllText(filePath);
 
-                txtboxb.Text = fileContent;
+                listboxbestand.Items.Add(fileContent);
+               
 
             }
         }

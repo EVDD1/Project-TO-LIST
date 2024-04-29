@@ -11,7 +11,7 @@
             <StackPanel>
                 
                 <TextBox Name="txtbxtoevoegen" Margin="10" ToolTip="Typ hier je opdracht in." ></TextBox>
-                <TextBox Name="txtbxDatum" Margin="10" ToolTip="Vul hier datum in ../../" ></TextBox>
+                <TextBox Name="txtbxDatum" Margin="10" ToolTip="Vul hier datum in ../../...." ></TextBox>
                 <Button Click="Button_Click_2" Margin="10" ToolTip="Je opdracht toevoegen." Background="LightSkyBlue" FontWeight="Bold" >Toevoegen</Button>
             </StackPanel>
         </GroupBox>
@@ -22,6 +22,14 @@
                 <Button Click="Button_Click" Margin="10" ToolTip="Opdracht verwijderen." Background="Red" FontSize="20" FontWeight="Bold" >Verwijderen</Button>
                 <TextBox Name="txtbxVervangen" Margin="10" ></TextBox>
                 <Button Click="Button_Click_1" Margin="10" >Vervangen</Button>
+                <Grid>
+                    
+                    <Button Click="Button_Click_3" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestand." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
+                    <Button Click="Button_Click_4" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>
+                    <Button Click="Button_Click_5" Content="Sluiten" Background="Red" FontWeight="Bold" ToolTip="Alles sluiten." HorizontalAlignment="Center" Margin="10" Height="45" Width="100"></Button>
+                </Grid>
+                    
+                
             </StackPanel>
 
         </GroupBox>
