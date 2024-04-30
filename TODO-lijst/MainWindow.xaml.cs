@@ -83,7 +83,9 @@ namespace TODO_lijst
         {
             string datum = txtbxDatum.Text;
             int controle = 0;
-         
+
+        
+       
             try
             {
                if(DateTime.TryParse(datum, out DateTime result))
