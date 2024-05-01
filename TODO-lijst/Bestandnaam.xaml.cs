@@ -51,19 +51,24 @@ namespace TODO_lijst
         {
             try
             {
-                if (Path.GetExtension(txtbestandNaam.Text).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                if (txtbestandNaam.Text != "")
                 {
-                    string BestandNaam = txtbestandNaam.Text;
+                    if (Path.GetExtension(txtbestandNaam.Text).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                    {
+                        string BestandNaam = txtbestandNaam.Text;
 
-                    MessageBox.Show("Bestand toegevoegd!");
-           
+                        MessageBox.Show("Bestand toegevoegd!");
 
-                    _mainWindow.BestandToegvoegen(BestandNaam);
-                     
-                   
+
+                        _mainWindow.BestandToegvoegen(BestandNaam);
+
+
+                    }
+                    else
+                        MessageBox.Show("Je moet .txt achter bestandnaam zetten!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
-                    MessageBox.Show("Je moet .txt achter bestandnaam zetten", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Je moet eerst een bestandnaam intypen!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
@@ -111,8 +116,10 @@ namespace TODO_lijst
                     string fileContent = File.ReadAllText(filePath);
 
                     
-                    _mainWindow.GegevensBewerkenOpenen(fileContent,selectedFileName);
+                    _mainWindow.GegevensBewerkenOpenen(fileContent,selectedFileName,filePath);
                 }
+                else
+                    MessageBox.Show("Selecteer eerst een bestand om te bewerken!","Fout",MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
@@ -150,7 +157,7 @@ namespace TODO_lijst
                 }
                 else
                 {
-                    MessageBox.Show("Selecteer eerst een bestand om te verwijderen.");
+                     MessageBox.Show("Selecteer eerst een bestand om te verwijderen!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)

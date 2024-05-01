@@ -27,7 +27,10 @@ namespace TODO_lijst
 
 		public string Toevoegen()
 		{
-			return $"-{lijst} : {datum}";
+			//Alleen de datum moet erop komen en niet de tijd
+			string datum1 = datum.ToShortDateString();
+
+			return $"-{lijst} : {datum1}";
 		}
 	}
 }

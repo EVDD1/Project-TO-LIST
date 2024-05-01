@@ -50,8 +50,10 @@ namespace TODO_lijst
             bestandNaam.Show();
 
         }
-        public void GegevensBewerkenOpenen(string tekst,string naam)
+        public void GegevensBewerkenOpenen(string tekst,string naam,string bestand)
         {
+            bestandNaam.Close();
+
             bewerken = new Bewerken(this);
             bewerken.Owner = this;
             bewerken.Show();
@@ -59,7 +61,7 @@ namespace TODO_lijst
             
             bewerken.Gegevens(tekst);
 
-            bewerken.BestandNaam(naam);
+            bewerken.BestandNaam(naam,bestand);
 
         }
         public void BestandToegvoegen(string Naam)
@@ -159,16 +161,10 @@ namespace TODO_lijst
 
             try
             {
+
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(desktopPath, $"{BestandNaam1}");
                 File.WriteAllText(filePath, json);
-                ////De onnodige tekens wegdoen
-                //string[] splitsen = json.Split(',');
-                //foreach (string s in splitsen)
-                //{
-                //    File.WriteAllText(filePath, s.Trim('[', ']', '"'));
-                //}
-
 
                 MessageBox.Show("Items zijn opgeslagen!");
             }
@@ -180,18 +176,20 @@ namespace TODO_lijst
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            //als je op terug klikt dan moet alles gecleard worden
+            //als je op terug klikt dan moet alles gecleard worden  
             items.Clear();
             listBox.Items.Clear();
 
+            KnopTerug();
+        }
+        
+        public void KnopTerug()
+        {
             //het eerste venster weer openen
             bestandNaam = new Bestandnaam(this);
             bestandNaam.Owner = this;
             bestandNaam.Show();
-
-       
         }
-
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             //venster sluiten
