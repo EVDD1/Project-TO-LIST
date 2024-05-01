@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.IO.Ports;
@@ -29,25 +30,48 @@ namespace TODO_lijst
         SerialPort serialPort  = new SerialPort();
         Opdrachten Opdrachten = new Opdrachten();
         Bestandnaam bestandNaam;
+        MainWindow mainWindow;
+        Bewerken bewerken;
         string BestandNaam1;
 
         string nieuweTaak;
         public MainWindow()
         {
+
             InitializeComponent();
+
             items = new List<string>();
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
             bestandNaam = new Bestandnaam(this);
             bestandNaam.Owner = this;
             bestandNaam.Show();
-        }
 
+        }
+        public void GegevensBewerkenOpenen(string tekst,string naam)
+        {
+            bewerken = new Bewerken(this);
+            bewerken.Owner = this;
+            bewerken.Show();
+
+            
+            bewerken.Gegevens(tekst);
+
+            bewerken.BestandNaam(naam);
+
+        }
         public void BestandToegvoegen(string Naam)
         {
+
             bestandNaam.Close();
+      
             BestandNaam1 = Naam;
+
+            txtblckbestand.Text = Naam;
+
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         { 
@@ -70,22 +94,11 @@ namespace TODO_lijst
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-            if(listBox.SelectedIndex != -1)
-            {
-                items[listBox.SelectedIndex] = txtbxVervangen.Text;
-            }
-        }
-
+       
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             string datum = txtbxDatum.Text;
             int controle = 0;
-
-        
-       
             try
             {
                if(DateTime.TryParse(datum, out DateTime result))
@@ -125,8 +138,6 @@ namespace TODO_lijst
                 nieuweTaak = Opdrachten.Toevoegen();
 
                 listBox.Items.Add(nieuweTaak);
-                //items toevoegen aan list
-                items.Add(Opdrachten.Toevoegen());
 
                 txtbxDatum.Clear();
                 //tekstvak leeg maken
@@ -139,6 +150,10 @@ namespace TODO_lijst
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            foreach(string item in listBox.Items)
+            {
+               items.Add(item);
+            }
             
             string json = JsonConvert.SerializeObject(items);
 
@@ -147,6 +162,13 @@ namespace TODO_lijst
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(desktopPath, $"{BestandNaam1}");
                 File.WriteAllText(filePath, json);
+                ////De onnodige tekens wegdoen
+                //string[] splitsen = json.Split(',');
+                //foreach (string s in splitsen)
+                //{
+                //    File.WriteAllText(filePath, s.Trim('[', ']', '"'));
+                //}
+
 
                 MessageBox.Show("Items zijn opgeslagen!");
             }
@@ -167,7 +189,7 @@ namespace TODO_lijst
             bestandNaam.Owner = this;
             bestandNaam.Show();
 
-          
+       
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)

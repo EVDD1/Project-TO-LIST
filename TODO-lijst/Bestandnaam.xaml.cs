@@ -22,14 +22,15 @@ namespace TODO_lijst
     /// </summary>
     public partial class Bestandnaam : Window
     {
-         MainWindow _mainWindow;
-
+        MainWindow _mainWindow;
+        Bewerken bewerken;
+    
         string fileName;
         public Bestandnaam(MainWindow mainWindow)
         {
             InitializeComponent();
 
-           _mainWindow = mainWindow;
+            _mainWindow = mainWindow;
 
             comboboxbestanden.Items.Add("None");
 
@@ -54,11 +55,12 @@ namespace TODO_lijst
                 {
                     string BestandNaam = txtbestandNaam.Text;
 
-                    _mainWindow.BestandToegvoegen(BestandNaam);
-
                     MessageBox.Show("Bestand toegevoegd!");
+           
 
-
+                    _mainWindow.BestandToegvoegen(BestandNaam);
+                     
+                   
                 }
                 else
                     MessageBox.Show("Je moet .txt achter bestandnaam zetten", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -83,8 +85,11 @@ namespace TODO_lijst
                     string filePath = Path.Combine(desktopPath, selectedFileName);
                     string fileContent = File.ReadAllText(filePath);
 
-                    listboxbestand.Items.Add(fileContent);
-
+                    string[] splitsen = fileContent.Split(',');
+                    foreach (string s in splitsen)
+                    {
+                        listboxbestand.Items.Add(s.Trim('[', ']', '"'));
+                    }
 
                 }
             }
@@ -96,7 +101,24 @@ namespace TODO_lijst
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (comboboxbestanden.SelectedItem != null && comboboxbestanden.SelectedItem.ToString() != "None")
+                {
+                    string selectedFileName = comboboxbestanden.SelectedItem.ToString();
+                    string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    string filePath = Path.Combine(desktopPath, selectedFileName);
+                    string fileContent = File.ReadAllText(filePath);
 
+                    
+                    _mainWindow.GegevensBewerkenOpenen(fileContent,selectedFileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+           
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

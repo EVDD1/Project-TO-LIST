@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="TODO-lijst" SizeToContent="Height" Width="600" FontSize="20" Background="LightGray" Loaded="Window_Loaded">
     <StackPanel Margin="10">
+        <TextBlock Name="txtblckbestand" Margin="10" Background="DarkGray"></TextBlock>
         <GroupBox Header="Taak toevoegen">
             <StackPanel>
                 
@@ -20,8 +21,6 @@
             <StackPanel>
                 <ListBox Name="listBox" Margin="10"  ></ListBox>
                 <Button Click="Button_Click" Margin="10" ToolTip="Opdracht verwijderen." Background="Red" FontSize="20" FontWeight="Bold" >Verwijderen</Button>
-                <TextBox Name="txtbxVervangen" Margin="10" ></TextBox>
-                <Button Click="Button_Click_1" Margin="10" >Vervangen</Button>
                 <Grid Background="DarkGray">
                     
                     <Button Click="Button_Click_3" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestand." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
