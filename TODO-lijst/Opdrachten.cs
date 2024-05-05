@@ -7,30 +7,14 @@ using System.Threading.Tasks;
 
 namespace TODO_lijst
 {
-    internal class Opdrachten
-    {
-		private DateTime datum;
+	internal class Opdrachten : ToDoList
+	{ 
 
-		public DateTime Datum
+		public override string Toevoegen()
 		{
-			get { return datum; }
-			set { datum = value; }
-		}
+			string Toevoegen1 = base.Toevoegen();
 
-		private string lijst;
-
-		public string Lijst
-		{
-			get { return lijst; }
-			set { lijst = value.ToUpper(); }
-		}
-
-		public string Toevoegen()
-		{
-			//Alleen de datum moet erop komen en niet de tijd
-			string datum1 = datum.ToShortDateString();
-
-			return $"-{lijst} : {datum1}";
+			return Toevoegen1;
 		}
 	}
 }

@@ -179,6 +179,7 @@ namespace TODO_lijst
             //als je op terug klikt dan moet alles gecleard worden  
             items.Clear();
             listBox.Items.Clear();
+            txtblckbestand.Text = string.Empty; //clearen
 
             KnopTerug();
         }

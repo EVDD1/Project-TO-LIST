@@ -36,7 +36,7 @@ namespace TODO_lijst
 
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            string[] files = Directory.GetFiles(desktopPath,"*.txt");
+            string[] files = Directory.GetFiles(desktopPath,"*.json");
 
            
             foreach (string file in files)
@@ -53,7 +53,7 @@ namespace TODO_lijst
             {
                 if (txtbestandNaam.Text != "")
                 {
-                    if (Path.GetExtension(txtbestandNaam.Text).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                    if (Path.GetExtension(txtbestandNaam.Text).Equals(".json", StringComparison.OrdinalIgnoreCase))
                     {
                         string BestandNaam = txtbestandNaam.Text;
 
@@ -65,7 +65,7 @@ namespace TODO_lijst
 
                     }
                     else
-                        MessageBox.Show("Je moet .txt achter bestandnaam zetten!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Je moet .json achter bestandnaam zetten!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                     MessageBox.Show("Je moet eerst een bestandnaam intypen!", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
