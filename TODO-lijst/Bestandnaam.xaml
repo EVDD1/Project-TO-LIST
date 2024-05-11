@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TODO_lijst"
         mc:Ignorable="d"
-        Title="Bestandnaam" SizeToContent="Height" Width="300" Background="LightGray" FontSize="20">
+        Title="Instellen" SizeToContent="Height" Width="300" Background="LightGray" FontSize="20">
     <StackPanel Margin="10">
         <GroupBox Header="Bestand kiezen">
             <StackPanel>
                 <ComboBox Name="comboboxbestanden" Margin="10" SelectionChanged="cmbxbestanden_SelectionChanged"></ComboBox>
                 <Grid>
-                    <Button Click="Button_Click_1" Margin="10" Content="Bewerken" Background="Green" FontWeight="Bold" HorizontalAlignment="Left"  Height="45" Width="100" ToolTip="Bestand bewerken." ></Button>
-                    <Button Click="Button_Click_2" Margin="10" Content="Verwijderen" Background="Red" FontWeight="Bold" HorizontalAlignment="Right"  Height="45" Width="130" ToolTip="Bestand verwijderen." ></Button>
+                    <Button Click="Bewerken_click" Margin="10" Content="Bewerken" Background="Green" FontWeight="Bold" HorizontalAlignment="Left"  Height="45" Width="100" ToolTip="Bestand bewerken." ></Button>
+                    <Button Click="Verwijderen_click" Margin="10" Content="Verwijderen" Background="Red" FontWeight="Bold" HorizontalAlignment="Right"  Height="45" Width="130" ToolTip="Bestand verwijderen." ></Button>
                 </Grid>
 
               
@@ -22,7 +22,7 @@
         <GroupBox Header="Nieuwe bestandnaam">
             <StackPanel>
                 <TextBox Name="txtbestandNaam" Margin="10" ToolTip="Vul hier je bestandnaam in."></TextBox>
-                <Button Click="Button_Click" Margin="10" Content="Toevoegen" Background="CadetBlue" FontWeight="Bold" ToolTip="Nieuw bestand toevoegen." ></Button>
+                <Button Click="Toevoegen_click" Margin="10" Content="Toevoegen" Background="CadetBlue" FontWeight="Bold" ToolTip="Nieuw bestand toevoegen." ></Button>
             </StackPanel>
            
         </GroupBox>

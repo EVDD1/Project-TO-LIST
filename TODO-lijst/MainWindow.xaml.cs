@@ -44,7 +44,7 @@ namespace TODO_lijst
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            //Het venster openen waar je de bestanden kan maken en bewerken
             bestandNaam = new Bestandnaam(this);
             bestandNaam.Owner = this;
             bestandNaam.Show();
@@ -52,6 +52,7 @@ namespace TODO_lijst
         }
         public void GegevensBewerkenOpenen(string tekst,string naam,string bestand)
         {
+            //hier het andere venster openen voor de bestanden te bewerken
             bestandNaam.Close();
 
             bewerken = new Bewerken(this);
@@ -75,7 +76,7 @@ namespace TODO_lijst
 
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Verwijderen_click(object sender, RoutedEventArgs e)
         { 
             try
             {
@@ -97,7 +98,7 @@ namespace TODO_lijst
         }
 
        
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Toevoegen_click(object sender, RoutedEventArgs e)
         {
             string datum = txtbxDatum.Text;
             int controle = 0;
@@ -150,7 +151,7 @@ namespace TODO_lijst
 
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Opslaan_click(object sender, RoutedEventArgs e)
         {
             foreach(string item in listBox.Items)
             {
@@ -174,7 +175,7 @@ namespace TODO_lijst
             }
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Terug_click(object sender, RoutedEventArgs e)
         {
             //als je op terug klikt dan moet alles gecleard worden  
             items.Clear();
@@ -191,7 +192,7 @@ namespace TODO_lijst
             bestandNaam.Owner = this;
             bestandNaam.Show();
         }
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void Sluiten_click(object sender, RoutedEventArgs e)
         {
             //venster sluiten
             this.Close();

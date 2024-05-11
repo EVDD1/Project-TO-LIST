@@ -36,6 +36,7 @@ namespace TODO_lijst
 
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
+            //alle bestanden die met json eindigen komen in de combobox
             string[] files = Directory.GetFiles(desktopPath,"*.json");
 
            
@@ -47,7 +48,7 @@ namespace TODO_lijst
            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Toevoegen_click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -90,6 +91,7 @@ namespace TODO_lijst
                     string filePath = Path.Combine(desktopPath, selectedFileName);
                     string fileContent = File.ReadAllText(filePath);
 
+                    //Om de tekst mooi in de list te tonen
                     string[] splitsen = fileContent.Split(',');
                     foreach (string s in splitsen)
                     {
@@ -104,7 +106,7 @@ namespace TODO_lijst
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Bewerken_click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -128,7 +130,7 @@ namespace TODO_lijst
            
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Verwijderen_click(object sender, RoutedEventArgs e)
         {
            
             try

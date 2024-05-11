@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TODO_lijst"
         mc:Ignorable="d"
-        Title="Bewerken" SizeToContent="Height" Width="500" FontSize="20" Background="LightGray">
-    <StackPanel>
+        Title="Bewerken" SizeToContent="Height" Width="500" FontSize="20" Background="LightGray" >
+    <StackPanel >
         <TextBlock Name="txtblckbnaam" Margin="10" Background="DarkGray" ></TextBlock>
         <ListBox Name="listboxbewerken" Margin="10" ></ListBox>
-        <Button Click="Button_Click" Margin="10" Background="Red" FontWeight="Bold" ToolTip="Opdracht verwijderen." >Verwijderen</Button>
+        <Button Click="Verwijderen_click" Margin="10" Background="Red" FontWeight="Bold" ToolTip="Opdracht verwijderen." >Verwijderen</Button>
 
         <TextBox Name="txtbxOprdracht" Margin="10" ToolTip="Typ hier je opdracht in." ></TextBox>
         <TextBox Name="txtbxDatum" Margin="10"  ToolTip="Vul hier datum in ../../...." ></TextBox>
 
-        <Button Click="Button_Click_1" Margin="10" Background="LightSkyBlue" FontWeight="Bold" ToolTip="Je opdracht toevoegen." >Toevoegen</Button>
+        <Button Click="Toevoegen_click" Margin="10" Background="LightSkyBlue" FontWeight="Bold" ToolTip="Je opdracht toevoegen." >Toevoegen</Button>
         <Grid Background="DarkGray">
-            <Button Click="Button_Click_2" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestanden." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
-            <Button Click="Button_Click_3" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>
+            <Button Click="Opslaan_click" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestanden." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
+            <Button Click="Terug_click" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>
         </Grid>
         
 

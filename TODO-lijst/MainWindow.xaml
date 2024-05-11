@@ -13,19 +13,19 @@
                 
                 <TextBox Name="txtbxtoevoegen" Margin="10" ToolTip="Typ hier je opdracht in." ></TextBox>
                 <TextBox Name="txtbxDatum" Margin="10" ToolTip="Vul hier datum in ../../...." ></TextBox>
-                <Button Click="Button_Click_2" Margin="10" ToolTip="Je opdracht toevoegen." Background="LightSkyBlue" FontWeight="Bold" >Toevoegen</Button>
+                <Button Click="Toevoegen_click" Margin="10" ToolTip="Je opdracht toevoegen." Background="LightSkyBlue" FontWeight="Bold" >Toevoegen</Button>
             </StackPanel>
         </GroupBox>
 
         <GroupBox Header="TODO-lijst">
             <StackPanel>
                 <ListBox Name="listBox" Margin="10"  ></ListBox>
-                <Button Click="Button_Click" Margin="10" ToolTip="Opdracht verwijderen." Background="Red" FontSize="20" FontWeight="Bold" >Verwijderen</Button>
+                <Button Click="Verwijderen_click" Margin="10" ToolTip="Opdracht verwijderen." Background="Red" FontSize="20" FontWeight="Bold" >Verwijderen</Button>
                 <Grid Background="DarkGray">
                     
-                    <Button Click="Button_Click_3" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestanden." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
-                    <Button Click="Button_Click_4" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>
-                    <Button Click="Button_Click_5" Content="Sluiten" Background="DarkRed" FontWeight="Bold" ToolTip="Alles sluiten." HorizontalAlignment="Center" Margin="10" Height="45" Width="100"></Button>
+                    <Button Click="Opslaan_click" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestanden." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
+                    <Button Click="Terug_click" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>
+                    <Button Click="Sluiten_click" Content="Sluiten" Background="DarkRed" FontWeight="Bold" ToolTip="Alles sluiten." HorizontalAlignment="Center" Margin="10" Height="45" Width="100"></Button>
                 </Grid>
                     
                 

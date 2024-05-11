@@ -49,6 +49,7 @@ namespace TODO_lijst
         }
         public void Gegevens(string list)
         {
+            //Om de tekst mooi in de list te tonen
             string[] splitsen = list.Split(',');
             foreach (string s in splitsen)
             {
@@ -58,7 +59,7 @@ namespace TODO_lijst
        
                 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Verwijderen_click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -78,7 +79,7 @@ namespace TODO_lijst
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Toevoegen_click(object sender, RoutedEventArgs e)
         {
 
             string datum = txtbxDatum.Text;
@@ -116,7 +117,7 @@ namespace TODO_lijst
                 MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            //toevoegen als allebij de voorwaarden juist zijn
+            //toevoegen als de beide voorwaarden juist zijn
             if (controle == 2)
             {
                 nieuweTaak = opdrachten.Toevoegen();
@@ -131,7 +132,7 @@ namespace TODO_lijst
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Opslaan_click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -151,7 +152,7 @@ namespace TODO_lijst
             }
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Terug_click(object sender, RoutedEventArgs e)
         {
             this.Close();
 
