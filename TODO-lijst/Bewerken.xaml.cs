@@ -25,9 +25,9 @@ namespace TODO_lijst
     public partial class Bewerken : Window
     {
         private List<string> items;
-        Bestandnaam bestandNaam;
+ 
         MainWindow _mainWindow;
-        Bewerken bewerken;
+     
         Opdrachten opdrachten = new Opdrachten();
 
         string nieuweTaak;

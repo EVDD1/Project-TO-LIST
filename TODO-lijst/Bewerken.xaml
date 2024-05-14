@@ -5,16 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TODO_lijst"
         mc:Ignorable="d"
-        Title="Bewerken" SizeToContent="Height" Width="500" FontSize="20" Background="LightGray" >
-    <StackPanel >
-        <TextBlock Name="txtblckbnaam" Margin="10" Background="DarkGray" ></TextBlock>
-        <ListBox Name="listboxbewerken" Margin="10" ></ListBox>
-        <Button Click="Verwijderen_click" Margin="10" Background="Red" FontWeight="Bold" ToolTip="Opdracht verwijderen." >Verwijderen</Button>
+        Title="Bewerken" SizeToContent="Height" Width="525" FontSize="20" Background="LightGray" >
+    <StackPanel Margin="10">
+        <GroupBox Header="TODO-lijst">
+            <StackPanel>
+                <TextBlock Name="txtblckbnaam" Margin="10" Background="DarkGray" ></TextBlock>
+                <ListBox Name="listboxbewerken" Margin="10" ></ListBox>
+                <Button Click="Verwijderen_click" Margin="10" Background="Red" FontWeight="Bold" ToolTip="Opdracht verwijderen." >Verwijderen</Button>
+            </StackPanel>
+        </GroupBox>
 
-        <TextBox Name="txtbxOprdracht" Margin="10" ToolTip="Typ hier je opdracht in." ></TextBox>
-        <TextBox Name="txtbxDatum" Margin="10"  ToolTip="Vul hier datum in ../../...." ></TextBox>
+        <GroupBox Header="Taak bewerken">
+            <StackPanel>
+                <Grid>
+                    <Label Content="Taak:" Margin="10"></Label>
+                    <TextBox Name="txtbxOprdracht" Margin="10" ToolTip="Typ hier je opdracht in." HorizontalAlignment="Right" Width="390" ></TextBox>
+                </Grid>
 
-        <Button Click="Toevoegen_click" Margin="10" Background="LightSkyBlue" FontWeight="Bold" ToolTip="Je opdracht toevoegen." >Toevoegen</Button>
+                <Grid>
+                   <Label Content="Datum:" Margin="10"></Label>
+                  <TextBox Name="txtbxDatum" Margin="10"  ToolTip="Vul hier datum in ../../...." HorizontalAlignment="Right" Width="390" ></TextBox>
+                 </Grid>
+        
+                <Button Click="Toevoegen_click" Margin="10" Background="LightSkyBlue" FontWeight="Bold" ToolTip="Je opdracht toevoegen." >Toevoegen</Button>
+            </StackPanel>
+        </GroupBox>
+    
         <Grid Background="DarkGray">
             <Button Click="Opslaan_click" Content="Opslaan" Background="Green" FontWeight="Bold" ToolTip="Bestand opslaan in bestanden." HorizontalAlignment="Left" Margin="10" Height="45" Width="100"></Button>
             <Button Click="Terug_click" Content="Terug" Background="CadetBlue" FontWeight="Bold" ToolTip="Terug naar het beginscherm." HorizontalAlignment="Right" Margin="10" Height="45" Width="100" ></Button>

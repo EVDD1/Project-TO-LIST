@@ -33,3 +33,4 @@ C:\Users\emiel\OneDrive - Hogeschool VIVES\Project OOP\TODO-lijst\TODO-lijst\obj
 C:\Users\emiel\OneDrive - Hogeschool VIVES\Project OOP\TODO-lijst\TODO-lijst\obj\Debug\net8.0-windows\Bestandnaam.baml
 C:\Users\emiel\OneDrive - Hogeschool VIVES\Project OOP\TODO-lijst\TODO-lijst\obj\Debug\net8.0-windows\Bewerken.g.cs
 C:\Users\emiel\OneDrive - Hogeschool VIVES\Project OOP\TODO-lijst\TODO-lijst\obj\Debug\net8.0-windows\Bewerken.baml
+C:\Users\emiel\OneDrive - Hogeschool VIVES\Project OOP\TODO-lijst\TODO-lijst\obj\Debug\net8.0-windows\TODO-lijst.sourcelink.json

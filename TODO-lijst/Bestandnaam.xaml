@@ -26,5 +26,6 @@
             </StackPanel>
            
         </GroupBox>
+        <Button Click="Sluiten_Click" Margin="10" Background="DarkRed" FontWeight="Bold" ToolTip="Programma sluiten" >Sluiten</Button>
     </StackPanel>
 </Window>

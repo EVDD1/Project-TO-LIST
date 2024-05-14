@@ -27,10 +27,8 @@ namespace TODO_lijst
     {
         private List<string> items;
 
-        SerialPort serialPort  = new SerialPort();
         Opdrachten Opdrachten = new Opdrachten();
         Bestandnaam bestandNaam;
-        MainWindow mainWindow;
         Bewerken bewerken;
         string BestandNaam1;
 
@@ -59,7 +57,7 @@ namespace TODO_lijst
             bewerken.Owner = this;
             bewerken.Show();
 
-            
+            //gegevens versturen naar de andere window
             bewerken.Gegevens(tekst);
 
             bewerken.BestandNaam(naam,bestand);
@@ -192,10 +190,6 @@ namespace TODO_lijst
             bestandNaam.Owner = this;
             bestandNaam.Show();
         }
-        private void Sluiten_click(object sender, RoutedEventArgs e)
-        {
-            //venster sluiten
-            this.Close();
-        }
+   
     }
 }

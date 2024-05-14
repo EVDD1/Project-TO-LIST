@@ -23,7 +23,7 @@ namespace TODO_lijst
     public partial class Bestandnaam : Window
     {
         MainWindow _mainWindow;
-        Bewerken bewerken;
+     
     
         string fileName;
         public Bestandnaam(MainWindow mainWindow)
@@ -79,8 +79,8 @@ namespace TODO_lijst
 
         private void cmbxbestanden_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            listboxbestand.Items.Clear();
 
+            listboxbestand.Items.Clear();
 
             try
             {
@@ -89,6 +89,7 @@ namespace TODO_lijst
                     string selectedFileName = comboboxbestanden.SelectedItem.ToString();
                     string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                     string filePath = Path.Combine(desktopPath, selectedFileName);
+
                     string fileContent = File.ReadAllText(filePath);
 
                     //Om de tekst mooi in de list te tonen
@@ -117,7 +118,7 @@ namespace TODO_lijst
                     string filePath = Path.Combine(desktopPath, selectedFileName);
                     string fileContent = File.ReadAllText(filePath);
 
-                    
+                    //gegevens versturen naar de window van bewerken
                     _mainWindow.GegevensBewerkenOpenen(fileContent,selectedFileName,filePath);
                 }
                 else
@@ -132,7 +133,7 @@ namespace TODO_lijst
 
         private void Verwijderen_click(object sender, RoutedEventArgs e)
         {
-           
+          
             try
             {
                 if (comboboxbestanden.SelectedItem != null && comboboxbestanden.SelectedItem.ToString() != "None")
@@ -141,6 +142,7 @@ namespace TODO_lijst
                     string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                     string filePath = Path.Combine(desktopPath, selectedFileName);
 
+                    //het bestand verwijderen uit het bureaublad en combobox
                     if (File.Exists(filePath))
                     {
                         File.Delete(filePath);
@@ -148,6 +150,7 @@ namespace TODO_lijst
 
                         // Verwijder het geselecteerde item uit de combobox
                         comboboxbestanden.Items.Remove(comboboxbestanden.SelectedItem);
+
                         // Wis de selectie in de combobox
                         comboboxbestanden.SelectedIndex = 0;
 
@@ -166,6 +169,13 @@ namespace TODO_lijst
             {
                 MessageBox.Show("Er is een fout opgetreden: " + ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void Sluiten_Click(object sender, RoutedEventArgs e)
+        {
+            //heel het programma sluiten
+            _mainWindow.Close();
+          
         }
     }
 }

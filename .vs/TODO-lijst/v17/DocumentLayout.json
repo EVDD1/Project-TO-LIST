@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bewerken.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bewerken.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bestandnaam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bestandnaam.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bestandnaam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bestandnaam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bewerken.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bewerken.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bewerken.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bewerken.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\bestandnaam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\bestandnaam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\opdrachten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\opdrachten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|c:\\users\\emiel\\onedrive - hogeschool vives\\project oop\\todo-lijst\\todo-lijst\\opdrachten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{088A6BCE-7544-4339-A86E-E8FE6DB23B2B}|TODO-lijst\\TODO-lijst.csproj|solutionrelative:todo-lijst\\opdrachten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Opdrachten.cs",
               "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Opdrachten.cs",
               "RelativeDocumentMoniker": "TODO-lijst\\Opdrachten.cs",
@@ -64,20 +60,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TODO-lijst\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\MainWindow.xaml.cs",
-              "RelativeToolTip": "TODO-lijst\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAYwLcAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "ToDoList.cs",
+              "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\ToDoList.cs",
+              "RelativeDocumentMoniker": "TODO-lijst\\ToDoList.cs",
+              "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\ToDoList.cs",
+              "RelativeToolTip": "TODO-lijst\\ToDoList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T18:18:33.078Z",
+              "WhenOpened": "2024-05-14T17:06:31.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TODO-lijst\\MainWindow.xaml",
@@ -89,13 +85,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TODO-lijst\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\MainWindow.xaml.cs",
+              "RelativeToolTip": "TODO-lijst\\MainWindow.xaml.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAQwHoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T18:18:33.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Bewerken.xaml.cs",
               "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Bewerken.xaml.cs",
               "RelativeDocumentMoniker": "TODO-lijst\\Bewerken.xaml.cs",
               "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Bewerken.xaml.cs",
               "RelativeToolTip": "TODO-lijst\\Bewerken.xaml.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAYwDUAAAAqAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T08:53:23.584Z",
               "EditorCaption": ""
@@ -114,20 +123,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Bestandnaam.xaml.cs",
               "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Bestandnaam.xaml.cs",
               "RelativeDocumentMoniker": "TODO-lijst\\Bestandnaam.xaml.cs",
               "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Bestandnaam.xaml.cs",
               "RelativeToolTip": "TODO-lijst\\Bestandnaam.xaml.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAgwHcAAAAUAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T20:38:09.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Bestandnaam.xaml",
               "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\Bestandnaam.xaml",
               "RelativeDocumentMoniker": "TODO-lijst\\Bestandnaam.xaml",
@@ -135,31 +144,6 @@
               "RelativeToolTip": "TODO-lijst\\Bestandnaam.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-25T20:35:02.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ToDoList.cs",
-              "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\ToDoList.cs",
-              "RelativeDocumentMoniker": "TODO-lijst\\ToDoList.cs",
-              "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\ToDoList.cs",
-              "RelativeToolTip": "TODO-lijst\\ToDoList.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T19:12:29.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\App.xaml",
-              "RelativeDocumentMoniker": "TODO-lijst\\App.xaml",
-              "ToolTip": "C:\\Users\\emiel\\OneDrive - Hogeschool VIVES\\Project OOP\\TODO-lijst\\TODO-lijst\\App.xaml",
-              "RelativeToolTip": "TODO-lijst\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-25T20:38:56.477Z",
               "EditorCaption": ""
             }
           ]
